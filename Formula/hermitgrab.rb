@@ -19,11 +19,11 @@ class Hermitgrab < Formula
     # Attempt ad-hoc codesign
     system "codesign", "--force", "--deep", "--sign", "-", bin/"hermitgrab"
 
-    # Optionally remove quarantine attribute
-    if MacOS.version >= :catalina
-      # Silently ignore if quarantine attribute doesn't exist
-      system "xattr", "-d", "com.apple.quarantine", bin/"hermitgrab" rescue nil
-    end
+    system <<~EOS
+      if xattr -p com.apple.quarantine #{bin/"hermitgrab"} >/dev/null 2>&1; then
+        xattr -d com.apple.quarantine #{bin/"hermitgrab"}
+      fi
+    EOS
   end
 
   test do
