@@ -21,7 +21,8 @@ class Hermitgrab < Formula
 
     # Optionally remove quarantine attribute
     if MacOS.version >= :catalina
-      system "xattr", "-d", "com.apple.quarantine", bin/"hermitgrab"
+      # Silently ignore if quarantine attribute doesn't exist
+      system "xattr", "-d", "com.apple.quarantine", bin/"hermitgrab" rescue nil
     end
   end
 
