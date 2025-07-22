@@ -4,13 +4,13 @@ class Hermitgrab < Formula
   
   if Hardware::CPU.arm?
     url "https://hermitgrab.app/releases/latest/download/hermitgrab-macos-aarch64.zip"
-    sha256 "4befa8bfbdc222ad68470cd974d99a70e28e023d777dca2e777b138086702f7c"
+    sha256 "483fb0b7c4530368f208cf58e8e90b013c03bc37df380e74f1a2fe1dc200cb88"
   else
     url "https://hermitgrab.app/releases/latest/download/hermitgrab-macos-x86_64.zip"
-    sha256 "69eb39d806ed6bc2744c6537e26d7afeed90918b4682d7ba5f519f48e5cca9c8"
+    sha256 "1632c05370bc8b76f24453a4957e41828b65705011d5b4e4f0793701f797afb9"
   end
 
-  version "latest"
+  version "v0.1.6"
   license "GPL-3.0-only"
 
   def install
