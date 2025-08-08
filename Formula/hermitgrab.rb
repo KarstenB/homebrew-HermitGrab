@@ -3,10 +3,10 @@ class Hermitgrab < Formula
   homepage "https://hermitgrab.app"
   
   if Hardware::CPU.arm?
-    url "https://hermitgrab.app/releases/latest/download/hermitgrab-macos-aarch64.zip"
+    url "https://github.com/karstenb/hermitgrab/releases/latest/download/hermitgrab-macos-aarch64.zip"
     sha256 "1e62eabc3309e9a1b2be61475baa2bc43b9274dbbc444b3f5ba7261248b14f76"
   else
-    url "https://hermitgrab.app/releases/latest/download/hermitgrab-macos-x86_64.zip"
+    url "https://github.com/karstenb/hermitgrab/releases/latest/download/hermitgrab-macos-x86_64.zip"
     sha256 "228b10fed0b3268a2c5618ba7f190f90b806ab4095cebc7ae15323413c6ee7d2"
   end
 
