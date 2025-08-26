@@ -12,6 +12,7 @@ class Hermitgrab < Formula
 
   version "v0.1.8"
   license "GPL-3.0-only"
+  depends_on "xz"
 
   def install
     bin.install "hermitgrab"
